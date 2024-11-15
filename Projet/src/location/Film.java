@@ -60,6 +60,32 @@ public class Film
 			return film.setEvaluations;	  
 	}
 
+	  /**
+	   * Renvoie l'ensemble des films d'un certain acteur.
+	   *
+	   * @param acteur l'acteur
+	   * @return l'ensemble des films de l'acteur ou <code>null</code> si aucun film
+	   *         n'a été trouvé ou que le paramètre était invalide
+	   */
+	  Set<Film> ensembleFilmsActeur(Artiste acteur)
+	  {
+		  
+	  }
+	  
+	  /**
+	   * Renvoie l'ensemble des films d'un certain acteur.
+	   *
+	   * @param nom le nom de l'acteur
+	   * @param prenom le prénom de l'acteur
+	   * @return l'ensemble des films de l'acteur ou <code>null</code> si aucun film
+	   *         n'a été trouvé ou que les paramètres étaient invalides
+	   */
+	  Set<Film> ensembleFilmsActeur(String nom, String prenom)
+	  {
+		  
+	  }
+	  
+	  
 	/**
 	 * Renvoie l'ensemble des évaluations d'un film.
 	 *
