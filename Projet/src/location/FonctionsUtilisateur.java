@@ -20,8 +20,7 @@ public class FonctionsUtilisateur implements InterUtilisateur {
 	
 	@Override
 	public int inscription(String pseudo, String mdp, InformationPersonnelle info) {
-		// TODO Auto-generated method stub
-		return 0;
+		return foncCompte.inscription(pseudo, mdp, info);
 	}
 
 	@Override
