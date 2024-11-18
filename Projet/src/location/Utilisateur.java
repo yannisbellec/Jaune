@@ -46,4 +46,13 @@ public class Utilisateur {
 	public String getMdp() {
 		return this.mdp;
 	}	
+	
+	public boolean peutLouer() {
+		if(this.locFilm.size()<3){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }

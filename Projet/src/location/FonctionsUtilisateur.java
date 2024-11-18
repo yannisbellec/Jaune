@@ -25,20 +25,18 @@ public class FonctionsUtilisateur implements InterUtilisateur {
 
 	@Override
 	public boolean connexion(String pseudo, String mdp) {
-		// TODO Auto-generated method stub
-		return false;
+		return foncCompte.connexion(pseudo, mdp);
 	}
 
 	@Override
 	public void deconnexion() throws NonConnecteException {
-		// TODO Auto-generated method stub
+		foncCompte.deconnexion();
 		
 	}
 
 	@Override
 	public void louerFilm(Film film) throws NonConnecteException, LocationException {
-		// TODO Auto-generated method stub
-		
+		foncLocation.louerFilm(film);
 	}
 
 	@Override

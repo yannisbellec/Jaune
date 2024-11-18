@@ -6,6 +6,7 @@ import java.util.*;
 
 public class Film 
 {
+	
 	private Set<Genre> setGenre;
 	private Set<Artiste> setArtistes;	
 	private Set<Evaluation> setEvaluations;
@@ -14,6 +15,7 @@ public class Film
 	private double noteMoyenne;
 	private int ageMin;
 	private int anneeReal;
+	private int nbLoc;
 
 	// temp a suppr 
 	private Set<Film> setFilms;
@@ -168,6 +170,15 @@ public class Film
 	    }
 		
 	}
+	
+	public boolean estDisponible() {
+		if(this.nbLoc <=3) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
 
 
 	// Constructeur avec tous les paramètres
@@ -180,6 +191,7 @@ public class Film
 		this.anneeReal = anneeReal;
 		this.ageMin = ageMin;
 		this.titre = titre;
+		this.nbLoc = 0;
 	}
 
 	// Constructeur sans le paramètre 'location'
