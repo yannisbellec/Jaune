@@ -12,21 +12,22 @@ public class Evaluation
 {
 	private int note;
 	private String commentaire;
-	private InterUtilisateur utilisateur;
+	//private InterUtilisateur utilisateur;
 	private Film film; 
 	
-	Evaluation(int note, String commentaire, InterUtilisateur utilisateur, Film film)
+	public Evaluation(int note, String commentaire,/* InterUtilisateur utilisateur,*/ Film film)
 	{
 		setNote(note);
 		this.commentaire = commentaire;
-		this.utilisateur = utilisateur;
+		/*this.utilisateur = utilisateur;*/
 		this.film = film;
+		film.setEvaluation(this);
 		film.calculeMoyenne();
 	}
 	
-	Evaluation(int note,InterUtilisateur utilisateur, Film film)
+	public Evaluation(int note,/*InterUtilisateur utilisateur,*/ Film film)
 	{
-		this(note,"",utilisateur,film);
+		this(note,"",/*utilisateur,*/film);
 	}
 	
 	public void setNote(int note)
@@ -42,6 +43,26 @@ public class Evaluation
 	public int getNote()
 	{
 		return this.note;
+	}
+	
+	public String getCommentaire()
+	{
+		return this.commentaire;
+	}
+	
+	public void setCommentaire(String commentaire)
+	{
+		this.commentaire = commentaire;
+	}
+	
+	public void setFilm(Film film)
+	{
+		this.film = film;
+	}
+	
+	public Film getFilm()
+	{
+		return this.film;
 	}
 	
 }
