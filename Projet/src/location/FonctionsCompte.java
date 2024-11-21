@@ -1,21 +1,24 @@
 package location;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class FonctionsCompte {
-    private List<Utilisateur> listUtilisateur;
+    private Set<Utilisateur> listUtilisateur;
     private Utilisateur utilisateurConnecte;
     
     public FonctionsCompte() {
-    	this.listUtilisateur = new ArrayList<Utilisateur>();
+    	this.listUtilisateur = (Set<Utilisateur>) new ArrayList<Utilisateur>();
     	this.utilisateurConnecte = null;
     }
     
     public Utilisateur getUtilisateurConnecte() {
     	return this.utilisateurConnecte;
     }
-    public List<Utilisateur> getListUtilisateur(){
+    
+    public Set<Utilisateur> getListUtilisateur(){
     	return this.listUtilisateur;
     }
     
@@ -38,9 +41,12 @@ public class FonctionsCompte {
 	}
     
 	public boolean connexion(String pseudo, String mdp) {
+		Iterator <Utilisateur> it = this.listUtilisateur.iterator();
+		
 		for(int i = 0; i < this.listUtilisateur.size(); i++) {
-			if((this.listUtilisateur.get(i).getPseudo() == pseudo) && (this.listUtilisateur.get(i).getMdp() == mdp)) {
-				this.utilisateurConnecte = this.listUtilisateur.get(i);
+			Utilisateur ut1 = it.next();
+			if( ut1.getPseudo() == pseudo && ut1.getMdp() == mdp) {
+				this.utilisateurConnecte = ut1;
 				return true;
 			}
 		}
