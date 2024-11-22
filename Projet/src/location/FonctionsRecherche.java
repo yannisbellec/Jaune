@@ -8,6 +8,8 @@ import java.util.Set;
  * sur les films et les artistes en fonction de divers critères.
  * Elle s'appuie sur les instances des classes {@link FonctionsFilms} 
  * et {@link FonctionsArtistes} pour accéder aux données nécessaires.
+ *
+ *@author Alexandre De Brito
  */
 public class FonctionsRecherche {
 

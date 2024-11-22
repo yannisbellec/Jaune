@@ -10,9 +10,6 @@ import location.Artiste;
 import location.Evaluation;
 import location.Film;
 import location.Genre;
-import location.InformationPersonnelle;
-
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -25,8 +22,8 @@ import org.junit.jupiter.api.Test;
 class TestFilm {
 
   /**
-   * Un film avec des informations de base : titre et année de réalisation.
-   */
+  * Un film avec des informations de base : titre et année de réalisation.
+  */
   private Film filmBasique;
 
   /**
