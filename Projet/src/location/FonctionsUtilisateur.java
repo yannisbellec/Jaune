@@ -3,13 +3,13 @@ package location;
 import java.util.Set;
 
 public class FonctionsUtilisateur implements InterUtilisateur {
-	
+
 	private FonctionsCompte foncCompte;
 	private FonctionsFilms foncFilmes;
 	private FonctionsLocation foncLocation;
 	private FonctionsRecherche foncRech;
 	private FonctionsAdministrateur foncAdmin;
-	
+
 	public FonctionsUtilisateur(FonctionsFilms foncFilms, FonctionsRecherche foncRech, FonctionsAdministrateur foncAdmin) {
 		this.foncCompte = new FonctionsCompte();
 		this.foncAdmin = foncAdmin;
@@ -17,7 +17,7 @@ public class FonctionsUtilisateur implements InterUtilisateur {
 		this.foncRech = foncRech;
 		this.foncLocation = new FonctionsLocation(this.foncFilmes, this.foncCompte);
 	}
-	
+
 	@Override
 	public int inscription(String pseudo, String mdp, InformationPersonnelle info) {
 		return foncCompte.inscription(pseudo, mdp, info);
@@ -31,7 +31,7 @@ public class FonctionsUtilisateur implements InterUtilisateur {
 	@Override
 	public void deconnexion() throws NonConnecteException {
 		foncCompte.deconnexion();
-		
+
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class FonctionsUtilisateur implements InterUtilisateur {
 	@Override
 	public void finLocationFilm(Film film) throws NonConnecteException, LocationException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -60,13 +60,13 @@ public class FonctionsUtilisateur implements InterUtilisateur {
 	@Override
 	public void ajouterEvaluation(Film film, Evaluation eval) throws NonConnecteException, LocationException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void modifierEvaluation(Film film, Evaluation eval) throws NonConnecteException, LocationException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

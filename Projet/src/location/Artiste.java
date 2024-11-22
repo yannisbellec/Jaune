@@ -46,7 +46,7 @@ public class Artiste {
 		return nom;
 	}
 
-	/**
+	/** 	
 	 * Retourne le prénom de l'artiste.
 	 *
 	 * @return le prénom de l'artiste
